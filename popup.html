@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Immich Image Search</title><link rel="stylesheet" href="popup.css"></head>
+<body><main>
+<header><div><h1>Search Immich by image</h1><p class="sub">Paste, drop, or choose a reference image.</p></div><button id="settings" class="icon-button" title="Settings" aria-label="Settings">⚙</button></header>
+<section class="account-selector" aria-label="Immich account">
+<label for="profile-select">Search in account</label>
+<select id="profile-select" aria-describedby="profile-status"></select>
+<p id="profile-status" class="sub" role="status" aria-live="polite">Loading account…</p>
+</section>
+<section id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Paste or drop an image"><div class="drop-icon">＋</div><strong id="drop-title">Paste an image here</strong><span id="drop-subtitle">Click here, press ⌘V, or drop an image</span><img id="preview" alt="Selected reference preview" hidden></section>
+<input id="file-input" type="file" accept="image/*" hidden><button id="choose" class="secondary">Choose image…</button>
+<p id="filename" class="filename" aria-live="polite">No image selected</p><button id="search" class="primary" disabled>Search my Immich library</button>
+<p id="status" class="status" role="status" aria-live="polite">Ready</p><button id="retry-open" class="secondary" hidden>Open native search anyway</button>
+<footer>References are archived in the <strong>Image2Image References</strong> album.</footer>
+</main><script src="storage.js"></script><script src="popup.js"></script></body></html>
